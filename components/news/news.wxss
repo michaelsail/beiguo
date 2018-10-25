@@ -1,0 +1,4 @@
+/* components/news/news.wxss */
+@import '/app.wxss';
+.newsleft{float:left;width: 220rpx;height: 160rpx;}
+.newsrgt{padding-left: 240rpx;}

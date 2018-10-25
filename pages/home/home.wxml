@@ -1,0 +1,15 @@
+<!--pages/home/home.wxml-->
+<view class="pb40 bg_fff">
+  <banner dataArr='{{bannerData}}'></banner>
+  <view class='pl15 pr15 pt5 pb5 lh24 fs16'>企业资讯</view>
+  <newslist dataArr='{{informationlist}}'></newslist>
+  <view class='pl15 pr15 pt5 pb5 lh24 fs16'>相关信息</view>
+  <view class='mt10 pt10 pb10 lh24 bortope fs16 textc'>
+    <view class='pb5 fs18'>公司电话</view>
+    <view class='pb10' bindtap="callPhone">{{phone}}</view>
+    <view class='pt10 pb5 bortope fs18'>公司地址</view>
+    <view class='pl15 pr15 pb10'>{{address}}</view>
+  </view>
+  <footitem tabtype='4' dataUserid='{{userid}}'></footitem>
+  <button open-type='contact' class='contact'><view class='mb5 iconfont icon_message'></view>留言</button>
+</view>

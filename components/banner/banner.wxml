@@ -1,0 +1,6 @@
+<!--components/banner/banner.wxml-->
+<swiper indicator-dots='true' indicator-color='rgba(255,255,255,.8)' indicator-active-color='rgba(0,0,0,1)' autoplay='true' circular='true' interval='3000'>
+    <swiper-item wx:for="{{dataArr}}" wx:key='index'>
+      <image src="{{item.imgurl}}" class="slide-image" mode='widthFix' />
+    </swiper-item>
+</swiper>

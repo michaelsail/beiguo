@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "footitem":"/components/footer/footer",
+    "banner": "/components/banner/banner",
+    "infotext": "/components/index/infotext/infotext"
+  },
+  "navigationBarTitleText": "微名片"
+}

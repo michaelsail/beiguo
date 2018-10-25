@@ -1,0 +1,30 @@
+<!--pages/productdetail/productdetail.wxml-->
+<view class='bg_f9f9f9'>
+  <swiper indicator-dots='true' indicator-color='rgba(255,255,255,.8)' indicator-active-color='rgba(0,0,0,1)' autoplay='true' circular='true' interval='3000'>
+      <swiper-item wx:for="{{imglist}}" wx:key='index'>
+        <image src="{{item.thumbimageurl}}" class="slide-image" mode='aspectFill' />
+      </swiper-item>
+  </swiper>
+  <view class='pl15 pr15 pt10 pb10 fs18 lh22 c_333'>{{name}}</view>
+  <view class='pl15 pr15 pb10'>
+    <text class='sale c_F55D3A'><text class='activity_price'>￥</text>{{currentprice}}</text>
+    <text class='origin ml10 c_999'>{{originalprice}}</text>
+  </view>
+  <view class='mt10 pl15 pr15 pt10 pb10 lh28 fs16 bg_fff'>
+    商品详情
+  </view>
+  <view class='pt10 pb40 bg_fff'>
+    <view wx:for="{{imgdetaillist}}" wx:key="index">
+        <image src='{{item.rawimageurl}}' class='w100' mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+<view class="footer flex">
+  <navigator url="/pages/product/product?type=2&scene={{userid}}" open-type="redirect" class="flex-item {{tabtype == '2' ? 'cur' : ''}}">
+    <text class="footicon iconfont icon_personal"></text>
+    <text class="block">产品</text>
+  </navigator>
+  <navigator url="" class="flex-item2">
+    <button open-type='contact' class="block h44 lh44 fs16 c_fff bg_1f9ffa" style='border:none;border-radius:0;'>咨询</button>
+  </navigator>
+</view>

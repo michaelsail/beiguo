@@ -1,0 +1,8 @@
+<!--components/news/news.wxml-->
+<view class="pl15 pr15 pt10 pb10 layout" bindtap='gotonews' data-urllink='{{item.contenturl}}' wx:for="{{dataArr}}" wx:key='index'>
+  <image src="{{item.imgurl}}" class='newsleft'></image>
+  <view class='newsrgt'>
+    <view class='overtwo h44 lh22 fs16 c_333'>{{item.title}}</view>
+    <view class='mt10 fs14 c_999'>{{item.date}}</view>
+  </view>
+</view>

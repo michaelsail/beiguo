@@ -1,0 +1,19 @@
+<!--components/footer/footer.wxml-->
+<view class="footer flex">
+  <navigator url="/pages/index/index?type=1&scene={{dataUserid}}" open-type="redirect" class="flex-item h44 {{tabtype == '1' ? 'cur' : ''}}">
+    <text class="footicon iconfont icon_store"></text>
+    <text class="block fs12">名片</text>
+  </navigator>
+  <navigator url="/pages/product/product?type=2&scene={{dataUserid}}" open-type="redirect" class="flex-item h44 {{tabtype == '2' ? 'cur' : ''}}">
+    <text class="footicon iconfont icon_personal"></text>
+    <text class="block fs12">产品</text>
+  </navigator>
+  <navigator url="/pages/dynamic/dynamic?type=3&scene={{dataUserid}}" open-type="redirect" class="flex-item h44 {{tabtype == '3' ? 'cur' : ''}}">
+    <text class="footicon iconfont icon_enter"></text>
+    <text class="block fs12">动态</text>
+  </navigator>
+  <navigator url="/pages/home/home?type=4&scene={{dataUserid}}" open-type="redirect" class="flex-item h44 {{tabtype == '4' ? 'cur' : ''}}">
+    <text class="footicon iconfont icon_collect"></text>
+    <text class="block fs12">官网</text>
+  </navigator>
+</view>

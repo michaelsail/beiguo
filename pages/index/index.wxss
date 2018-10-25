@@ -1,0 +1,5 @@
+/**index.wxss**/
+.cardbox{position:relative;height: 280rpx;padding:40rpx; border-radius: 16rpx;/*background:linear-gradient(314deg,rgba(0,210,113,1) 0%,rgba(2,208,193,1) 100%);*/
+box-shadow:0px 0rpx 18rpx 0px #ddd;color:#1e706e}
+.faceimg{position:absolute;right:40rpx;top:40rpx;width:120rpx;height: 120rpx;border-radius: 100%;}
+.faceindex{float:left;width:40rpx;height: 40rpx;margin-right:8rpx;border-radius: 4rpx;}

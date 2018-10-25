@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {},
+  "navigationBarTitleText": "商品详情",
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance": "100"
+}

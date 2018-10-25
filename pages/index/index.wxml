@@ -1,0 +1,73 @@
+<!--index.wxml-->
+<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 一键登录 </button>
+<block wx:else>
+<button bindtap='saoma'>1111</button>
+<view class='fs15'>{{post}}{{email}}</view>
+  <!--<view class="bg_fff pb40">
+    <view class='pl20 pr20 pt20 pb20'>
+      <view class='cardbox lh26' style="background:url(http://card.hudusoft.net/images/bgcard.png) no-repeat center;background-size:contain;">
+        <image src='{{logo}}' class='faceimg' mode='aspectFill'></image>
+        <view class='pb5 fs18 typo_bold'>{{name}}</view>
+        <view class='fs15'>{{post}}</view>
+        <view class='mt5 pt10 fs14'>
+          <text class='iconfont fs12 icon_tel'></text>{{mobile}}
+        </view>
+        <view class='fs14'>
+          <text class='iconfont fs12 icon_email'></text>
+          {{email}}
+        </view>
+        <view class='fs14 elli'>
+          <text class='iconfont fs12 icon_address'></text>
+          {{address}}
+        </view>
+      </view>
+    </view>
+    <view class="pt10 pb10 textc c_999" bindtap="showInfo">{{tipnames}} <text class='iconfont icon_up fs14 c_999' wx:if='{{infotext}}'></text><text class='iconfont icon_down fs14 c_999' wx:if='{{!infotext}}'></text></view>
+    <view class="pl20 pr20 pt10 pb10 lh20 bg_f9f9f9" wx:if="{{infotext}}">
+      <view class="pt8 pb8">
+        <text class='iconfont fs16 icon_tel c_1f9ffa'></text> {{mobile}}
+        <text class="fright pl10 pr10 boradius3 fs12 bor_1f9ffa c_1f9ffa" bindtap="callPhone">拨打</text>
+      </view>
+      <view class="pt8 pb8">
+        <text class='iconfont fs16 icon_weixin c_1f9ffa'></text> {{weixin}}
+        <text class="fright pl10 pr10 boradius3 fs12 bor_1f9ffa c_1f9ffa" data-copyname='weixin' bindtap="copyName">复制</text>
+      </view>
+      <view class="pt8 pb8">
+        <text class='iconfont fs16 icon_email c_1f9ffa'></text> {{email}}
+        <text class="fright pl10 pr10 boradius3 fs12 bor_1f9ffa c_1f9ffa" data-copyname='email' bindtap="copyName">复制</text>
+      </view>
+      <view class="pt8 pb8">
+        <text class='iconfont fs15 icon_company c_1f9ffa'></text> {{company}}
+        <text class="fright pl10 pr10 boradius3 fs12 bor_1f9ffa c_1f9ffa" data-copyname='company' bindtap="copyName">复制</text>
+      </view>
+      <view class="pt8 pb8">
+        <text class='iconfont fs18 icon_address c_1f9ffa'></text> {{address}}
+        <text class="fright pl10 pr10 boradius3 fs12 bor_1f9ffa c_1f9ffa" data-copyname='address' bindtap="copyName">复制</text>
+      </view>
+    </view>
+    <view class='flex pt20 pb20 textc'>
+      <view class='flex-item pl20 pr10'>
+      <button class='lh26 pt5 pb5 boradius5 bor_1f9ffa fs15 c_1f9ffa bg_fff' id="shareBtn" open-type="share" hover-class="other-button-hover">分享名片</button>
+      </view>
+      <view class='flex-item pl10 pr20'>
+        <view class='lh26 pt5 pb5 boradius5 bor_1f9ffa fs15 c_fff bg_1f9ffa' bindtap="addPhone">存入手机通讯录</view>
+      </view>
+    </view>
+    <view class='pt20 pb20 pl20 pr20 layout'>
+      <view class='fright fs12 textc c_999' bindtap='praise'>
+        <view class='pb5 iconfont icon_praisecount'></view>
+        靠谱 {{praisecount}}
+      </view>
+      <view class='fleft w-80'>
+        <view class='fleft w100'>
+          <image src="{{item.face}}" class='faceindex'  wx:for="{{browselist}}" wx:key='index'></image>
+        </view>
+        <view class='fleft w100 pt5 lh24 fs12 c_999'>{{browselistcount}}人浏览</view>
+      </view>
+    </view>
+    <view class='pl15 pr15 pt10 pb10 fs16 typo_bold c_333'>我的个人简介</view>
+    <view class='pl15 pr15 pt5 pb10 fs16 lh22 c_333'>{{introduce}}</view>
+    <footitem tabtype='1' dataUserid='{{userid}}'></footitem>
+  </view>-->
+  <button open-type='contact' class='contact'><view class='mb5 iconfont icon_message'></view>留言</button>
+</block>

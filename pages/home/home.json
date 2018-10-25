@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "footitem": "/components/footer/footer",
+    "banner": "/components/banner/banner",
+    "newslist": "/components/news/news"
+  },
+  "navigationBarTitleText": "官网"
+}

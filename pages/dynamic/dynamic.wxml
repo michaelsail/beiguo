@@ -1,0 +1,36 @@
+<!--pages/dynamic/dynamic.wxml-->
+<view class="pb40 bg_fff">
+  <view wx:for="{{dynamiclist}}" wx:key='{{index}}' class="pl15 pr15 pt15 pb15 bortopf layout">
+    <image src="{{item.logo}}" class="dynamimg" mode='aspectFill'></image>
+    <view class="dynamrgt">
+      <view class='fs16 typo_bold' bindtap='gotonews' data-urllink='{{item.contenturl}}'>{{item.title}}</view>
+      <view>
+        <image src="{{item.imgurl}}" class="contentimg" mode='aspectFit'></image>
+      </view>
+      <view class="pt5 lh20 fs12 c_999">{{item.date}}</view>
+      <view class='textr layout' style="height:60rpx;">
+        <text class='fright iconfont icon_comment' data-prasieindex = '{{index}}' data-prasieid = '{{item.id}}' bindtap='prasiebtnShow'></text>
+        <view wx:if="{{item.prasiebtn}}" class='fright mr5 lh18 pt5 pb5 pl10 pr10 boradius3 fs14 bg_000 c_fff' style='margin-top:-10rpx'>
+            <text bindtap='prasiethis' data-prasieindex = '{{item.id}}'><text class="iconfont icon_praisecount fs14"></text>赞</text>
+            <text class='fright ml10' bindtap='bindReply' data-prasieindex = '{{item.id}}'><text class="iconfont icon_comment fs14"></text>评论</text>
+        </view>
+      </view>
+      <view class='mt2 pt5 pr5 pb5 pl5 bg_f9f9f9 relative' wx:if='{{item.praiselist.length>0}}'>
+        <text class='absolute triangle-up'></text>
+        <text wx:for="{{item.praiselist}}" wx:key='index' class='praisename c_1f9ffa'>{{item.nickname}}</text>
+      </view>
+      <view class='pt5 pr5 pb5 pl5 bg_f9f9f9 bortope' wx:if="{{item.commentlist.length>0}}">
+        <view wx:for="{{item.commentlist}}" wx:key='index' class='lh20 c_1f9ffa'>
+          {{item.nickname}}
+          <text class='c_666'>：{{item.contents}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button open-type='contact' class='contact'><view class='mb5 iconfont icon_message'></view>留言</button>
+  <footitem tabtype='3' dataUserid='{{userid}}'></footitem>
+</view>
+  <view class="release" hidden="{{!releaseFocus}}">
+    <textarea class="text" placeholder-class="input_null" fixed="true" maxlength="-1" show-confirm-bar="false" cursor-spacing="15" auto-height="true" focus="{{releaseFocus}}" placeholder="" bindinput="bindinput"></textarea>
+    <view class="submit" bindtap='sendcomment'>发送</view>
+  </view>

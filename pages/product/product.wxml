@@ -1,0 +1,28 @@
+<view class='container'>
+  <scroll-view scroll-x='true' class='container bg_fff'>
+  <view bind:tap='handleSelected' data-selected-index='0' class='tab c_333 {{0 === selectedIndex ? "selected" : ""}}'>全部</view> 
+    <block wx:for='{{catelist}}' wx:key='id'>
+      <view bind:tap='handleSelected' data-selected-index='{{item.id}}' class='tab c_333 {{item.id === selectedIndex ? "selected" : ""}}'>{{item.name}}</view>
+    </block>
+  </scroll-view>
+</view>
+<view class='goods-list' wx:if='{{recommendData.length>0}}'>
+  <block wx:for='{{recommendData}}' wx:key='id' >
+    <navigator hover-class='none' style='border:none;text-align:left' type='none'  plain='true' class='noP noM goods mt5' data-goodsid = '{{item.id}}' open-type="redirect" url="/pages/productdetail/productdetail?goods_id={{item.id}}&scene={{userid}}">
+        <view class='img'><image class='imgItem' src='{{item.imgurl}}' mode='aspectFill'></image></view>
+        <view class='des'>
+            <text class='title c_333'>{{item.name}}</text>
+            <view class='price mt10'>
+                <text class='sale c_F55D3A'><text class='activity_price'>￥</text>{{item.currentprice}}</text>
+                <text class='origin c_999'>{{item.originalprice}}</text>
+            </view>
+        </view>
+    </navigator>
+  </block>
+</view>
+<view wx:else class='nodata'>
+<image class='pic_kong' src='/images/pic_kong.png'></image>
+<view class='noDataCon'>暂无数据哦~</view>
+</view>
+<button open-type='contact' class='contact'><view class='mb5 iconfont icon_message'></view>留言</button>
+<footitem tabtype='2' dataUserid='{{userid}}'></footitem> 

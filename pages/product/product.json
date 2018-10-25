@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "footitem": "/components/footer/footer"
+  },
+  "navigationBarTitleText": "产品",
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance": "100"
+}

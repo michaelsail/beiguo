@@ -1,0 +1,19 @@
+/* pages/productdetail/productdetail.wxss */
+@import '/app.wxss';
+swiper{height: 560rpx;}
+.slide-image{width:100%;height: 100%;}
+.sale{
+  font-size: 36rpx;
+  line-height: 40rpx;
+}
+.origin{
+  font-size: 28rpx;
+  line-height: 24rpx;
+  text-decoration: line-through;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.origin::before{
+  content: '￥';
+}
